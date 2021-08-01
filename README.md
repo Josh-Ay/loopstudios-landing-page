@@ -2,7 +2,7 @@
 
 This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-You can preview the site [here]().
+You can preview the site [here](https://josh-ay.github.io/loopstudios-landing-page/).
 
 ## Table of contents
 
@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View my solution here](https://your-solution-url.com)
-- Live Site URL: [Preview the site](https://your-live-site-url.com)
+- Solution URL: [View my solution here](https://www.frontendmentor.io/solutions/loopstudios-landing-page-B_uDiR_8h)
+- Live Site URL: [Preview the site](https://josh-ay.github.io/loopstudios-landing-page/)
 
 ## My process
 
