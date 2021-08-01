@@ -1,0 +1,15 @@
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/sass
+# Edit at https://www.toptal.com/developers/gitignore?templates=sass
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# End of https://www.toptal.com/developers/gitignore/api/sass

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Loopstudios landing page solution">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <!-- Links to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet" />
+
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-container">
+        <nav class="navigation">
+          <img class="logo-img" src="./images/logo.svg" alt="logo image" />
+          <button id="hamburger" class="hamburger">
+            <img src="./images/icon-hamburger.svg" alt="navigation icon">
+          </button>
+          <ul class="nav-links">
+            <li><a href="javascript:void(0)" aria-label="Find out more about loopstudios">About<div class="underline"></div></a></li>
+            <li><a href="javascript:void(0)" aria-label="View careers in loopstudios">Careers<div class="underline"></div></a></li>
+            <li><a href="javascript:void(0)" aria-label="Find out uptcoming events">Events<div class="underline"></div></a></li>
+            <li><a href="javascript:void(0)" aria-label="View our products">Products<div class="underline"></div></a></li>
+            <li><a href="javascript:void(0)" aria-label="Get in contact with our customer support for any questions you may have">Support<div class="underline"></div></a></li>
+          </ul>
+        </nav>
+        <div class="top-content">Immersive experiences that deliver</div>
+      </div>
+
+      <main class="main-content">
+        <div class="interactive">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-interactive.jpg"
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="./images/mobile/image-interactive.jpg"
+            />
+            <img
+              src="./images/desktop/image-interactive-800w.jpg"
+              alt="Man wearing VR goggles"
+            />
+          </picture>
+          <div class="interactive-text-content">
+            <h1 class="title">The leader in interactive VR</h1>
+            <p>
+              Founded in 2011, Loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. Our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
+        </div>
+
+        <div class="creations-container">
+          <div class="mini-navbar-1">
+            <h1>Our creations</h1>
+          </div>
+          <div class="mini-navbar-2">
+            <button class="see-btn" type="button">See all</button>
+          </div>
+          <div class="deep-earth rel-position">
+            <div class="picture-text">Deep<br>earth</div>
+          </div>
+          <div class="night-arcade rel-position">
+            <div class="picture-text">Night<br>arcade</div>
+          </div>
+          <div class="soccer-team rel-position">
+            <div class="picture-text">Soccer<br>team VR</div>
+          </div>
+          <div class="the-grid rel-position">
+            <div class="picture-text">The<br/>grid</div>
+          </div>
+          <div class="from-up-above-vr rel-position">
+            <div class="picture-text">From up<br>above VR</div>
+          </div>
+          <div class="pocket-borealis rel-position">
+            <div class="picture-text">Pocket<br>borealis</div>
+          </div>
+          <div class="the-curiosity rel-position">
+            <div class="picture-text">The<br>curiosity</div>
+          </div>
+          <div class="make-it-fisheye rel-position">
+            <div class="picture-text">Make it<br>fisheye</div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="contact-links">
+          <img src="./images/logo.svg" alt="logo image" />
+          <div class="bottom-nav">
+            <ul class="nav-links">
+              <li><a href="javascript:void(0)" aria-label="Find out more about loopstudios">About<div class="underline"></div></a></li>
+              <li><a href="javascript:void(0)" aria-label="View careers in loopstudios">Careers<div class="underline"></div></a></li>
+              <li><a href="javascript:void(0)" aria-label="Find out upcoming events">Events<div class="underline"></div></a></li>
+              <li><a href="javascript:void(0)" aria-label="View our products">Products<div class="underline"></div></a></li>
+              <li><a href="javascript:void(0)" aria-label="Get in contact with our customer support for any questions you may have">Support<div class="underline"></div></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="social-links">
+            <ul class="socials">
+              <li><a href="javascript:void(0)"><embed src="./images/icon-facebook.svg" alt="facebook icon" aria-label="Connect with us on Facebook"></a></li>
+              <li><a href="javascript:void(0)"><embed src="./images/icon-twitter.svg" alt="twitter icon" aria-label="Connect with us on Twitter"></a></li>
+              <li><a href="javascript:void(0)"><embed src="./images/icon-pinterest.svg" alt="pinterest icon" aria-label="Connect with us on Pinterest"></a></li>
+              <li><a href="javascript:void(0)"><embed src="./images/icon-instagram.svg" alt="instagram icon" aria-label="Connect with us on instagram"></a></li>
+            </ul>
+          </div>
+          <div class="copyright">
+            © 2021 Loopstudios. All rights reserved.
+          </div>
+        </div>  
+        
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

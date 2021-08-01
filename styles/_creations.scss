@@ -1,0 +1,212 @@
+.see-btn{
+    font-family: $josefinFont;
+    float: right;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    outline: none;
+    background: none;
+    border: 1px solid $blackColor;
+    padding: 1.2% 8.2%;
+    transition: 0.4s;
+    &:hover{
+        cursor: pointer;
+        color: $whiteColor;
+        background-color: $blackColor;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        float: none;
+        display: block;
+        font-size: 2.2em;
+        margin: 10% auto 0;
+    }
+    @media (max-width:767px){
+        float: none;
+        padding: 2.5% 14%;
+        margin: auto;
+        display: block;
+    }
+}
+
+.creations-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-areas: 
+    "mini-navbar-1 mini-navbar-1 mini-navbar-2 mini-navbar-2" 
+    "deep-earth night-arcade soccer-team the-grid"
+    "from-up-above-vr pocket-borealis the-curiosity make-it-fisheye"
+    ;
+    padding: 2% 12% 12%;
+    grid-gap: 1.7rem;
+    @media (min-width:768px) and (max-width: 991px) {
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 1fr 4fr 4fr 4fr 4fr 1fr;
+        grid-template: 
+        "mini-navbar-1 mini-navbar-1" "deep-earth night-arcade" "soccer-team the-grid"
+        "from-up-above-vr pocket-borealis" "the-curiosity make-it-fisheye" "mini-navbar-2 mini-navbar-2";
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: 0.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+        grid-template: 
+        "mini-navbar-1" "deep-earth" "night-arcade" "soccer-team" "the-grid" "from-up-above-vr" 
+        "pocket-borealis" "the-curiosity" "make-it-fisheye" "mini-navbar-2";
+        padding: 2% 6% 20%;
+    }
+    .mini-navbar-1{
+        padding-top: 3%;
+        grid-area: mini-navbar-1;
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-top: 10%; 
+        }
+        @media (max-width: 767px) {
+            padding: 18% 0 0;
+            text-align: center;
+        }
+    }
+    .mini-navbar-2{
+        padding-top: 3%;
+        grid-area: mini-navbar-2;
+    }
+    .deep-earth{
+        grid-area: deep-earth;
+        @include setCreationsBackgroundImage("desktop", "image-deep-earth", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-deep-earth", 50em);
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-deep-earth", 30vh); 
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-deep-earth", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .night-arcade{
+        grid-area: night-arcade;
+        @include setCreationsBackgroundImage("desktop", "image-night-arcade", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-night-arcade", 50em); 
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-night-arcade", 30vh);    
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-night-arcade", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .soccer-team{
+        grid-area: soccer-team;
+        @include setCreationsBackgroundImage("desktop", "image-soccer-team", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-soccer-team", 50em); 
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-soccer-team", 30vh);    
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-soccer-team", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .the-grid{
+        grid-area: the-grid;
+        @include setCreationsBackgroundImage("desktop", "image-grid", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-grid", 50em); 
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-grid", 30vh);    
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-grid", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .from-up-above-vr{
+        grid-area: from-up-above-vr;
+        @include setCreationsBackgroundImage("desktop", "image-from-above", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-from-above", 50em); 
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-from-above", 30vh);    
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-from-above", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .pocket-borealis{
+        grid-area: pocket-borealis;
+        @include setCreationsBackgroundImage("desktop", "image-pocket-borealis", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-pocket-borealis", 50em); 
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-pocket-borealis", 30vh);    
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-pocket-borealis", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .the-curiosity{
+        grid-area: the-curiosity;
+        @include setCreationsBackgroundImage("desktop", "image-curiosity", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-curiosity", 50em); 
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-curiosity", 30vh);    
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-curiosity", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .make-it-fisheye{
+        grid-area: make-it-fisheye;
+        @include setCreationsBackgroundImage("desktop", "image-fisheye", 30.8em);
+        @media (min-width: 768px) and (max-width: 991px) {
+            @include setCreationsBackgroundImage("desktop", "image-fisheye", 50em); 
+        }
+        @media (max-width: 767px) {
+            @include setCreationsBackgroundImage("mobile", "image-fisheye", 30vh);    
+        }
+        @media (max-width: 576px){
+            @include setCreationsBackgroundImage("mobile", "image-fisheye", 10em);
+        }
+        @include changeOpacityOnHover();
+    }
+    .picture-text{
+        color: $whiteColor;
+        width: 100%;
+        height: 21.1%;
+        font-family: $josefinFont;
+        text-transform: uppercase;
+        font-size: 1.9em;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        padding-left: 17.6%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+        @media (min-width: 768px) and (max-width: 991px){
+            font-size: 3.5em;
+            padding-left: 3.3%;
+            height: 22%;
+        }
+        @media (max-width: 767px){
+            font-size: 2.4em;
+            height: 100%;
+            padding: 17% 0 0 6%;
+        }
+        @media(max-width: 576px){
+            font-size: 2em;
+            height: 100%;
+            padding: 13% 0 0 6%;
+        }
+    }
+}

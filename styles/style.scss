@@ -1,0 +1,58 @@
+@import "./variables";
+
+@import "./mixins";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: $bodyFontSize;
+}
+
+// General custom styles
+h1{
+    font-family: $josefinFont;
+    text-transform: uppercase;
+    color: $blackColor;
+    font-size: 2.76em;
+}
+img{
+    max-width: 100%;
+}
+.rel-position{
+    @include relPosition();
+}
+
+// importing the top part of the site: navigation and the 'immersive experiences' part
+@import "./topContainer";
+
+// importing the main part: 'interactive vr' part with the guy wearing br goggles
+@import "./main";
+
+// importing the footer part
+@import "./_footer";
+
+// Tablets
+@media (min-width: 768px) and (max-width: 991px) {
+    h1{
+        font-size: 4.8em;
+    }
+    p{
+        font-size: 2.2em;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+// Mobile Devices
+@media (max-width: 767px) {
+    h1{
+        font-size: 9.1vw;
+    }
+    button{
+        font-size: 1.8em;
+    }
+    footer .bottom-nav .nav-links li a, p{
+        font-size: 1.52em;
+    }
+}

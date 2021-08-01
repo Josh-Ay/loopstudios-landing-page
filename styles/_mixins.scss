@@ -1,0 +1,142 @@
+// Mixin to make element relative
+@mixin relPosition {
+    position: relative;
+}
+
+// Mixin to make an element's display flex and justify content
+@mixin displayFlexAndSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+// Mixin for the navigation links: Accepts 'width' and height as parameters
+@mixin navLinks($width, $height){
+    .nav-links{
+        width: $width;
+        height: $height;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        li a{
+            text-decoration: none;
+            color: $whiteColor;
+            font-family: $alataFont;
+            padding-bottom: 10%;
+            @include relPosition();
+            &:hover div.underline{
+                width: 40%;
+                position: absolute;
+                top: 100%;
+                left: 30%;
+                transition: 0.3s ease-in;
+                height: 2.2px;
+                background-color: $whiteColor;
+            }
+        }
+        
+    }
+}
+
+
+// Change navbar display and style
+@mixin changeNavbarStyle($width, $vpHeight, $paddingFromTop, $fontSize){
+    .logo-img{
+        z-index: 3;
+    }
+    .nav-links{
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: $width;
+        top: 0%;
+        align-items: center;
+        right: 0%;
+        padding: 7% 0 7% 12%;
+        height: $vpHeight;
+        font-family: $josefinFont;
+        text-transform: uppercase;
+        clip-path: circle(10% at 90% -10%);
+        transition: all 1s ease-out;
+        z-index: 1;
+        li{
+            margin-right: auto;
+            padding-top: 9%;
+            &:nth-child(1){
+                padding-top: $paddingFromTop;
+            } 
+            a{
+                font-size: $fontSize;
+                font-family: $josefinFont;
+                &:hover div.underline{
+                    top: 100%;
+                    left: 30%;
+                    height: 2.2px; 
+                }
+            }
+        }
+    }  
+    .nav-links.open{
+        clip-path: circle(170% at 90% -10%);
+        background-color: $blackColor;
+    }
+}
+
+
+// Mixin for hamburger button
+@mixin includeHamburgerButton{
+    button.hamburger{
+        background: none;
+        outline: none;
+        border: none;
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+        transition: all 5s;
+    }    
+}
+
+
+// Change the style of the div with class "interactive"
+@mixin changeInteractiveDisplay{
+    img{
+        width: 100%;
+    }
+    .interactive-text-content{
+        position: relative;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        padding: 6% 0% 8% 0%;
+        text-align: center;
+    }
+}
+
+
+// Mixins related to the Creations container
+@mixin changeOpacityOnHover() {
+    &:hover::before{
+        transition: 0.6s ease-in-out;
+        cursor: pointer;
+        opacity: 0.3;
+    }
+    &:hover .picture-text{
+        transition: 0.6s ease-in-out;
+        cursor: pointer;
+        color: $blackColor;
+    }
+}
+
+@mixin setCreationsBackgroundImage($viewPort, $imageName, $height){
+    height: $height;
+    &::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url(../images/#{$viewPort}/#{$imageName}.jpg) no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+    }
+}
